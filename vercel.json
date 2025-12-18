@@ -1,0 +1,9 @@
+vercel.json{
+  "buildCommand": "npm install",
+  "outputDirectory": "public",
+  "rewrites": [
+    {"source": "/api/(.*)", "destination": "/server.js"},
+    {"source": "/(.*)", "destination": "/public/$1"},
+    {"source": "/(.*)", "destination": "/public/index.html"}
+  ]
+}
